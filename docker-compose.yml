@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./DockerDemo.Api
+      dockerfile: Dockerfile
+    ports:
+      - "6055:6050"
+#    environment:
+
+  frontend:
+    build:
+      context: ./DockerDemo.Client
+      dockerfile: Dockerfile
+    ports:
+      - "3005:80"
